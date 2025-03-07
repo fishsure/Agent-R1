@@ -1,6 +1,6 @@
 export VLLM_ATTENTION_BACKEND=XFORMERS
-export BASE_MODEL='Qwen/Qwen2.5-3B'
-export EXPERIMENT_NAME=hotpotqa-em-format-qwen2.5-3b
+export BASE_MODEL='/share/chaofan/models/Qwen2.5-7B-Instruct'
+export EXPERIMENT_NAME=hotpotqa-em-format-qwen2.5-7b-it-debug
 export HYDRA_FULL_ERROR=1
 export CUDA_LAUNCH_BLOCKING=1
 
@@ -42,7 +42,7 @@ python3 -m verl.trainer.main_ppo \
     trainer.experiment_name=$EXPERIMENT_NAME \
     trainer.n_gpus_per_node=8 \
     trainer.nnodes=1 \
-    trainer.save_freq=20 \
-    trainer.test_freq=20 \
+    trainer.save_freq=-1 \
+    trainer.test_freq=50 \
     trainer.total_epochs=1 \
-    trainer.val_before_train=True $@ 
+    trainer.val_before_train=False $@
