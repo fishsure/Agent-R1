@@ -1,6 +1,6 @@
 export VLLM_ATTENTION_BACKEND=XFORMERS
-export BASE_MODEL='Qwen/Qwen2.5-1.5B-Instruct'
-export PROJECT_NAME='hotpotqa_qwen2.5-1.5b-instruct'
+export BASE_MODEL='/data/yu12345/models/Qwen2.5-0.5B-Instruct'
+export PROJECT_NAME='crag_qwen2.5-0.5b-instruct'
 export EXPERIMENT_NAME=ppo
 export HYDRA_FULL_ERROR=1
 export CUDA_LAUNCH_BLOCKING=1
